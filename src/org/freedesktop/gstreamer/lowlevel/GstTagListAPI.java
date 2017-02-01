@@ -1,4 +1,5 @@
 /* 
+ * Copyright (c) 2016 Christophe Lafolet
  * Copyright (c) 2009 Levente Farkas
  * Copyright (c) 2007, 2008 Wayne Meissner
  * 
@@ -73,5 +74,7 @@ public interface GstTagListAPI extends com.sun.jna.Library {
     boolean gst_tag_list_get_string_index(TagList list, String tag, int index, Pointer[] value);
     boolean gst_tag_list_get_date_index(TagList list, String tag, int index, PointerByReference value);
     boolean gst_tag_list_get_date_index(TagList list, String tag, int index, Pointer[] value);
+    boolean gst_tag_list_get_date_time(TagList list, String tag, PointerByReference value);
+    boolean gst_tag_list_get_date_time_index(TagList list, String tag, int index, PointerByReference value);
     
 }
